@@ -57,7 +57,7 @@ body {
 
 /* ----------------------- ХЕДЕР ----------------------- */
 .header {
-    background: url("../bgs/header-bg.svg") 50% 100% / cover no-repeat;
+    background: url("/bgs/header-bg.svg") 50% 100% / cover no-repeat;
 }
 
 .header__navbar {
