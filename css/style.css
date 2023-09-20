@@ -19,6 +19,13 @@ body {
     color: var(--chief-color);
 }
 
+.title {
+    font-family: Gabriola;
+    font-size: 74px;
+    line-height: .82;
+    color: var(--chief-color);
+}
+
 .body--opened-menu {
     overflow: hidden;
 }
@@ -49,6 +56,11 @@ body {
 .main__about {
     padding: 140px 0;
 }
+
+.main__program {
+    padding-bottom: 145px;
+}
+
 
 .btn {
     display: flex;
@@ -81,6 +93,13 @@ body {
     inset: 0;
     background: #00000050;
     padding: 15px;
+}
+
+.title {
+    font-family: Gabriola;
+    font-size: 74px;
+    line-height: .82;
+    color: var(--chief-color);
 }
 
 .body--opened-modal .modal {
@@ -351,10 +370,7 @@ body {
 }
 
 .info__slogan {
-    font-family: Gabriola;
-    font-size: 74px;
     font-weight: 400;
-    line-height: .82;
     margin-bottom: 30px;
 }
 
@@ -496,13 +512,7 @@ body {
     margin-bottom: 30px;
 }
 
-.about__title {
-    color: var(--chief-color);
-    font-family: Gabriola;
-    font-style: normal;
-    font-size: 74px;
-    line-height: 0.82;
-}
+.about__title {}
 
 .about__title-slogan {}
 
@@ -535,6 +545,113 @@ body {
 }
 
 .about__grid-text {}
+
+/* -----------------------ПРОГРАММА ОБУЧЕНИЯ----------------------- */
+
+.program {}
+
+.program-top {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.program__heading {}
+
+.program__title {
+    margin-bottom: 20px;
+}
+
+.program__text {}
+
+.tab-controls {
+    display: flex;
+    gap: 26px;
+}
+
+.tab-controls__item {}
+
+.tab-controls__link {
+    display: block;
+    border-radius: 100px;
+    padding: 14px 30px;
+    box-shadow: 0px 4px 20px rgba(206, 195, 185, 0.3);
+    transition: var(--transition);
+}
+
+.tab-controls__link:hover {
+    background: #FFE0CB;
+}
+
+.tab-controls__link--active {
+    background: #FFE0CB;
+    box-shadow: 0px 4px 20px rgba(206, 195, 185, 0);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content--show {
+    display: block;
+}
+
+.accordion-list {}
+
+.accordion-list__item {
+    margin-bottom: 30px;
+    border-radius: 20px;
+    border: 1px solid var(--auxiliary-color);
+}
+
+.accordion-list__item:last-child {
+    margin-bottom: 0px;
+}
+
+.accordion-list__item--opened {}
+
+.accordion-list__control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    padding: 41px 30px;
+    width: 100%;
+    font-size: inherit;
+    font-family: Gabriola;
+    font-size: 42px;
+    line-height: 90%;
+    color: var(--minor-color);
+}
+
+.accordion-list__control-title {}
+
+.accordion-list__control-icon {}
+
+.accordion-list__content {}
+
+.accordion-content {
+    padding: 0 30px 40px;
+    display: flex;
+    gap: 80px;
+}
+
+.accordion-content__col {}
+
+.accordion-content__title {
+    text-transform: uppercase;
+    line-height: 1.6;
+    color: #CEAAD0;
+}
+
+.accordion-content__list {}
+
+.accordion-content__item {}
+
+.accordion-content__icon {}
+
+.accordion-content__text {}
 
 /* -----------------------ФУТЕР----------------------- */
 
@@ -810,15 +927,11 @@ body {
         padding-bottom: 80px;
     }
 
-    .info__slogan {
-        font-size: 12vh;
+    .title {
+        font-size: 12vw;
     }
 
     /* -------------------------------- */
-
-    .about__title {
-        font-size: 12vh;
-    }
 
     .about__grid {
         gap: 15px;
