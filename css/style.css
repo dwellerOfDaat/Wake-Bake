@@ -614,22 +614,65 @@ body {
 .accordion-list__control {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    gap: 15px;
+    text-align: left;
     background: transparent;
     padding: 41px 30px;
     width: 100%;
-    font-size: inherit;
     font-family: Gabriola;
     font-size: 42px;
     line-height: 90%;
     color: var(--minor-color);
+    transition: var(--transition);
 }
 
 .accordion-list__control-title {}
 
-.accordion-list__control-icon {}
 
-.accordion-list__content {}
+.accordion-list__control-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1.5px solid var(--auxiliary-color);
+    transition: var(--transition);
+}
+
+.accordion-list__control-icon svg {
+    margin-left: 2px;
+}
+
+.accordion-list__control-icon path {
+    transition: var(--transition);
+}
+
+.accordion-list__control:hover .accordion-list__control-icon {
+    transform: rotate(90deg);
+    background: var(--auxiliary-color);
+}
+
+.accordion-list__control:hover .accordion-list__control-icon path {
+    fill: var(--chief-bg-color);
+}
+
+.accordion-list__item--opened .accordion-list__control-icon {
+    transform: rotate(90deg);
+    background: var(--auxiliary-color);
+}
+
+.accordion-list__item--opened .accordion-list__control-icon path {
+    fill: var(--chief-bg-color);
+}
+
+
+.accordion-list__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+}
 
 .accordion-content {
     padding: 0 30px 40px;
@@ -637,21 +680,44 @@ body {
     gap: 80px;
 }
 
-.accordion-content__col {}
+.accordion-content__col:first-child {
+    min-width: 507px;
+    width: 100%;
+}
 
 .accordion-content__title {
     text-transform: uppercase;
+    margin-bottom: 20px;
     line-height: 1.6;
     color: #CEAAD0;
 }
 
 .accordion-content__list {}
 
-.accordion-content__item {}
+.accordion-content__item {
+    display: flex;
+    margin-bottom: 20px;
+}
 
-.accordion-content__icon {}
+.accordion-content__item:last-child {
+    margin-bottom: 0px;
+}
 
-.accordion-content__text {}
+.accordion-content__icon {
+    justify-content: center;
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #ceaad0;
+    border-radius: 50%;
+}
+
+.accordion-content__text {
+    min-width: 274px;
+}
 
 /* -----------------------ФУТЕР----------------------- */
 
