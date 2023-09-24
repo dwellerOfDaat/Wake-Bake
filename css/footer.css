@@ -1,0 +1,131 @@
+/* -----------------------ФУТЕР----------------------- */
+
+.footer {
+    color: var(--chief-bg-color);
+    background: #AB8261;
+    padding: 60px 0 66px;
+}
+
+.footer__inner {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1.1fr 1.1fr auto;
+    gap: 15px;
+}
+
+.footer__grid-col:first-child {
+    margin-top: -30px;
+}
+
+.footer__grid-col:last-child {
+    justify-items: end;
+}
+
+.footer__logo {
+    display: block;
+    max-width: 240px;
+}
+
+.footer__logo img {
+    width: 100%;
+}
+
+.footer__logo-text {
+    margin-bottom: 20px;
+}
+
+.footer__grid-col-list {
+    margin-top: -5px;
+}
+
+.footer__grid-col-item {
+    margin-bottom: 10px;
+}
+
+.footer__grid-col-item:last-child {
+    margin-bottom: 0;
+}
+
+.footer__grid-col-link {
+    display: block;
+    padding: 5px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.footer__grid-col-link::before {
+    content: '';
+    position: absolute;
+    transition: all 0.5s;
+    opacity: 0;
+    background: var(--auxiliary-color);
+    z-index: -1;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    top: -8px;
+    left: -13px;
+}
+
+.footer__grid-col-link:hover::before {
+    opacity: 1;
+}
+
+
+.footer__info__list {}
+
+.footer__info-item {
+    margin-bottom: 10px;
+}
+
+.footer__info-item:last-child {
+    margin-bottom: 0px;
+}
+
+.footer__info-link {}
+
+.footer__info__item {}
+
+.footer__grid-col-contact {
+    margin-bottom: 47px;
+}
+
+.footer__grid-col-number {
+    display: block;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.6;
+    transition: var(--transition);
+}
+
+.footer__grid-col-number:hover {
+    color: var(--auxiliary-color);
+}
+
+.footer__grid-col-copyright {
+    color: #DEC5B1;
+}
+
+.socials {
+    line-height: 0;
+}
+
+.socials__list {
+    display: flex;
+    gap: 15px;
+}
+
+.socials__item {}
+
+.socials__link {
+    display: block;
+}
+
+.socials__link path {
+    transition: var(--transition);
+}
+
+.socials__link:hover path {
+    fill: var(--auxiliary-color);
+}
