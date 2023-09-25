@@ -78,12 +78,12 @@
             const accordionList = e.currentTarget
             const accordionOpenedItem = accordionList.querySelector('.accordion-list__item--opened')
             const accordionOpenedContent = accordionList.querySelector('.accordion-list__item--opened .accordion-list__content')
-            
-            const accordionControl = e.target.closest('.accordion-list__control'); 
+
+            const accordionControl = e.target.closest('.accordion-list__control');
             if (!accordionControl) return
             const accordionItem = accordionControl.parentElement;
             const accordionContent = accordionControl.nextElementSibling;
-            
+
             if (accordionOpenedItem && accordionItem != accordionOpenedItem) {
                 accordionOpenedItem.classList.remove('accordion-list__item--opened');
                 accordionOpenedContent.style.maxHeight = null;
@@ -101,22 +101,64 @@
     });
 
     //----СЛАЙДЕР-ГАЛЕРЕЯ----
-    
-    const swiper = new Swiper('.gallery__slider', {
-       
-        slidesPerView: 4,
-        spaceBetween: 32,
+
+    new Swiper('.gallery__slider', {
+
+        slidesPerView: 1.4,
+        spaceBetween: 15,
 
         pagination: {
-          el: '.gallery__pagination',
-          type: 'fraction',
+            el: '.gallery__pagination',
+            type: 'fraction',
         },
-      
+
         navigation: {
-          nextEl: '.gallery__next',
-          prevEl: '.gallery__prev',
+            nextEl: '.gallery__next',
+            prevEl: '.gallery__prev',
         },
-      
-      });
-      
+
+        breakpoints: {
+            601: {
+                slidesPerView: 3,
+            },
+
+            801: {
+                spaceBetween: 32,
+            },
+
+            1101: {
+                slidesPerView: 4,
+            }
+        }
+
+    });
+
+    //----СЛАЙДЕР-ОТЗЫВЫ----
+
+    new Swiper('.testimonials__slider', {
+
+        slidesPerView: 1,
+        spaceBetween: 0,
+        centeredSlides: true,
+
+        navigation: {
+            nextEl: '.testimonials__next',
+            prevEl: '.testimonials__prev',
+        },
+
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+        },
+
+        breakpoints: {
+            901: {
+                slidesPerView: 1.5,
+            },
+            1201: {
+                slidesPerView: 2.1,
+            }
+        }
+
+    });
 })()
