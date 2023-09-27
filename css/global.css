@@ -4,6 +4,8 @@
     --chief-bg-color: #fff9f4;
     --auxiliary-bg-color: #FFE0CB;
     --minor-color: #1F1711;
+    --minor-color-2: #CEAAD0;
+    --input-color: #AC907A;
     --transition: all .4s;
     --b-r: 20px;
 }
@@ -127,7 +129,7 @@ body {
 
 .modal__cancel:hover path,
 .modal__cancel:hover rect {
-    stroke: #AC907A;
+    stroke: var(--input-color);
 }
 
 .modal__img {
@@ -148,7 +150,7 @@ body {
     margin-bottom: 30px;
 }
 
-.modal__form {}
+/* .modal__form {} */
 
 .modal__form-label {
     margin-bottom: 10px;
@@ -166,7 +168,7 @@ body {
     left: 28px;
     opacity: 0;
     transition: var(--transition);
-    color: #AC907A;
+    color: var(--input-color);
     font-size: 11px;
 }
 
@@ -176,7 +178,7 @@ body {
     font-size: 16px;
     width: 100%;
     background: #00000000;
-    border: 1px solid #AC907A;
+    border: 1px solid var(--input-color);
     padding: 19px 42px 19px 28px;
     border-radius: 100px;
 }
@@ -187,7 +189,7 @@ body {
 
 .field__input::placeholder {
     transition: var(--transition);
-    color: #AC907A;
+    color: var(--input-color);
 }
 
 .field__input:hover::placeholder {

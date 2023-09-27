@@ -68,24 +68,24 @@
     opacity: 0;
     border-radius: 50%;
     inset: 5px;
-    border: 1px solid #CEAAD0;
+    border: 1px solid var(--minor-color-2);
 }
 
 .about__img-btn:hover::before {
     opacity: 1;
 }
 
-.about__body {}
+/* .about__body {} */
 
 .about__heading {
     margin-bottom: 30px;
 }
 
-.about__title {}
+/* .about__title {} */
 
-.about__title-slogan {}
+/* .about__title-slogan {} */
 
-.about__descr {}
+/* .about__descr {} */
 
 .about__grid {
     display: grid;
@@ -113,11 +113,11 @@
     flex-shrink: 0;
 }
 
-.about__grid-text {}
+/* .about__grid-text {} */
 
 /* -----------------------ПРОГРАММА ОБУЧЕНИЯ----------------------- */
 
-.program {}
+/* .program {} */
 
 .program-top {
     display: flex;
@@ -132,7 +132,7 @@
     margin-bottom: 20px;
 }
 
-.program__text {}
+/* .program__text {} */
 
 .program__tab-content {
     margin-bottom: 40px;
@@ -143,7 +143,7 @@
     gap: 26px;
 }
 
-.tab-controls__item {}
+/* .tab-controls__item {} */
 
 .tab-controls__link {
     display: block;
@@ -171,7 +171,7 @@
     display: block;
 }
 
-.accordion-list {}
+/* .accordion-list {} */
 
 .accordion-list__item {
     margin-bottom: 30px;
@@ -202,7 +202,7 @@
     transition: var(--transition);
 }
 
-.accordion-list__control-title {}
+/* .accordion-list__control-title {} */
 
 
 .accordion-list__control-icon {
@@ -265,10 +265,10 @@
     text-transform: uppercase;
     margin-bottom: 20px;
     line-height: 1.6;
-    color: #CEAAD0;
+    color: var(--minor-color-2);
 }
 
-.accordion-content__list {}
+/* .accordion-content__list {} */
 
 .accordion-content__item {
     display: flex;
@@ -287,7 +287,7 @@
     margin-right: 8px;
     width: 24px;
     height: 24px;
-    border: 1px solid #ceaad0;
+    border: 1px solid var(--minor-color-2);
     border-radius: 50%;
 }
 
@@ -348,12 +348,12 @@
     font-size: 16px;
 }
 
-.program__price {}
+/* .program__price {} */
 
 .program__price-text {
     text-transform: uppercase;
     line-height: 1.6;
-    color: #CEAAD0;
+    color: var(--minor-color-2);
     margin-bottom: 5px;
 }
 
@@ -380,7 +380,7 @@
 /* -----------------------ГАЛЛЕРЕЯ----------------------- */
 
 
-.gallery {}
+/* .gallery {} */
 
 .gallery__inner {
     display: grid;
@@ -413,7 +413,7 @@
     margin-bottom: 40px;
 }
 
-.gallery__text {}
+/* .gallery__text {} */
 
 .gallery__nav {
     display: flex;
@@ -497,17 +497,17 @@
     width: 100%;
 }
 
-.gallery__wrapper {}
+/* .gallery__wrapper {}
 
-.gallery__slide {}
-
-
+.gallery__slide {} */
 
 
 
 
 
-.testimonials {}
+
+
+/* .testimonials {} */
 
 .testimonials__inner {
     display: flex;
@@ -525,7 +525,7 @@
     margin-bottom: 20px;
 }
 
-.testimonials__text {}
+/* .testimonials__text {} */
 
 .testimonials__nav {
     display: flex;
@@ -607,11 +607,11 @@
 }
 
 .swiper-slide-prev.testimonials__slide {
-opacity: 0.5;
+    opacity: 0.5;
 }
 
 .swiper-slide-next.testimonials__slide {
-opacity: 0.5;
+    opacity: 0.5;
 }
 
 .testimonials__slide.swiper-slide {
@@ -649,10 +649,10 @@ opacity: 0.5;
 
 .testimonials__student-inst {
     margin: 0 auto;
-    color: #CEAAD0;
+    color: var(--minor-color-2);
 }
 
-.testimonials__quote {}
+/* .testimonials__quote {} */
 
 .testimonials__quote span {
     display: block;
@@ -674,3 +674,135 @@ opacity: 0.5;
 .testimonials__scrollbar .swiper-scrollbar-drag {
     background: var(--auxiliary-color);
 }
+
+
+.contact {
+    padding: 140px 0;
+    background: url("../bgs/contact-bg.png") 50% 0% / cover no-repeat;
+}
+
+.contact__inner {
+    display: flex;
+    align-items: end;
+    gap: 84px;
+    position: relative;
+}
+
+.contact__inner::before {
+    content: url("../decor/blueberries-1.png");
+    position: absolute;
+    top: -4%;
+    left: 0%;
+}
+
+.contact__inner::after {
+    content: url("../decor/blueberries-2.png");
+    position: absolute;
+    top: 4%;
+    right: 0%;
+}
+
+.contact__img img {
+    width: 100%;
+    filter: drop-shadow(0px 4px 30px rgba(198, 176, 161, 0.3));
+}
+
+.contact__body {
+    max-width: 420px;
+}
+
+.contact__title {
+    margin-bottom: 20px;
+}
+
+.contact__text {
+    margin-bottom: 40px;
+}
+
+/* .contact__form {} */
+
+.contact__label {
+    margin-bottom: 10px;
+}
+
+
+.contact__input {
+    display: block;
+    transition: var(--transition);
+    font-size: 16px;
+    width: 100%;
+    background: #00000000;
+    border: 1px solid var(--input-color);
+    padding: 19px 42px 19px 28px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+}
+
+.contact__input:hover {
+    border-color: var(--auxiliary-color);
+}
+
+.contact__input::placeholder {
+    transition: var(--transition);
+    color: var(--input-color);
+}
+
+.contact__input:hover::placeholder {
+    color: var(--auxiliary-color);
+}
+
+.contact__check-label {
+    display: flex;
+    align-items: start;
+    font-size: 13px;
+    gap: 5px;
+    max-width: 288px;
+    margin-bottom: 20px;
+}
+
+.contact__check-label a {
+    text-decoration: underline;
+    transition: var(--transition);
+}
+
+.contact__check-label a:hover {
+    color: var(--auxiliary-color);
+}
+
+.contact__checkbox {
+    appearance: none;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid var(--input-color);
+    transition: var(--transition);
+    border-radius: 4px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.contact__checkbox::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("../icons/checkbox-icon.svg") 50% 50% no-repeat;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.contact__checkbox:hover {
+    border: 1.5px solid var(--auxiliary-color);
+}
+
+.contact__checkbox:checked {
+    background: var(--auxiliary-color);
+    border: 1.5px solid var(--auxiliary-color);
+}
+
+.contact__checkbox:checked::before {
+    opacity: 1;
+}
+
+/* .contact__checkbox {
+
+} */
