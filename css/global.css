@@ -10,6 +10,11 @@
     --b-r: 20px;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 135px;
+}
+
 body {
     font-family: "Montserrat", "Arial", sans-serif;
     font-size: 16px;

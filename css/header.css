@@ -1,57 +1,3 @@
-/* --------------------------БУРГЕР------------------------------ */
-
-.burger-icon {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 11;
-    width: 50px;
-    height: 50px;
-}
-
-.burger-icon span,
-.burger-icon span::before,
-.burger-icon span::after {
-    display: block;
-    transition: all .4s;
-    background: var(--chief-color);
-    border-radius: 100px;
-    width: 30px;
-    height: 3px;
-}
-
-.burger-icon span {
-    position: relative;
-}
-
-.burger-icon span::before,
-.burger-icon span::after {
-    content: '';
-    position: absolute;
-}
-
-.burger-icon span::before {
-    top: -10px;
-}
-
-.burger-icon span::after {
-    bottom: -10px;
-}
-
-.body--opened-menu .burger-icon span {
-    background: transparent;
-}
-
-.body--opened-menu .burger-icon span::before {
-    top: 0px;
-    transform: rotate(45deg);
-}
-
-.body--opened-menu .burger-icon span::after {
-    bottom: 0px;
-    transform: rotate(-45deg);
-}
-
 
 /* ----------------------- ХЕДЕР ----------------------- */
 .header {
@@ -231,4 +177,58 @@
 
 .info__img-btn:hover::before {
     opacity: 1;
+}
+
+/* --------------------------БУРГЕР------------------------------ */
+
+.burger-icon {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 11;
+    width: 50px;
+    height: 50px;
+}
+
+.burger-icon span,
+.burger-icon span::before,
+.burger-icon span::after {
+    display: block;
+    background: var(--chief-color);
+    transition: var(--transition);
+    border-radius: 100px;
+    width: 30px;
+    height: 3px;
+}
+
+.burger-icon span {
+    position: relative;
+}
+
+.burger-icon span::before,
+.burger-icon span::after {
+    content: '';
+    position: absolute;
+}
+
+.burger-icon span::before {
+    top: -10px;
+}
+
+.burger-icon span::after {
+    bottom: -10px;
+}
+
+.body--opened-menu .burger-icon span {
+    background: transparent;
+}
+
+.body--opened-menu .burger-icon span::before {
+    top: 0px;
+    transform: rotate(45deg);
+}
+
+.body--opened-menu .burger-icon span::after {
+    bottom: 0px;
+    transform: rotate(-45deg);
 }
