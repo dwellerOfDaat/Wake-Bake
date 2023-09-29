@@ -69,6 +69,7 @@
     }
 
     //----АККОРДЕОН----
+
     const accordionLists = document.querySelectorAll('.accordion-list');
 
     accordionLists.forEach(el => {
@@ -78,7 +79,7 @@
             const accordionList = e.currentTarget
             const accordionOpenedItem = accordionList.querySelector('.accordion-list__item--opened')
             const accordionOpenedContent = accordionList.querySelector('.accordion-list__item--opened .accordion-list__content')
-
+            e.preventDefault()
             const accordionControl = e.target.closest('.accordion-list__control');
             if (!accordionControl) return
             const accordionItem = accordionControl.parentElement;
